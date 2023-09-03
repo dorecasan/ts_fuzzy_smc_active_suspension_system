@@ -113,9 +113,9 @@ function hs = membershipFunc()
     for i = 1:1:2
         mem1 = ((-1)^(i+1))*(1/mss(i)-1/controlParams.ms)/(1/mss(1)-1/mss(2));
         for j=1:1:2
-            mem2 = ((-1)^(i+1))*(1/mufs(i)-1/controlParams.muf)/(1/mufs(1)-1/mufs(2));
+            mem2 = ((-1)^(j+1))*(1/mufs(j)-1/controlParams.muf)/(1/mufs(1)-1/mufs(2));
             for k=1:1:2
-                mem3 = ((-1)^(i+1))*(1/murs(i)-1/controlParams.mur)/(1/murs(1)-1/murs(2));
+                mem3 = ((-1)^(k+1))*(1/murs(k)-1/controlParams.mur)/(1/murs(1)-1/murs(2));
                 hs(k+2*(j-1)+2*2*(i-1)) = mem1*mem2*mem3;
             end
         end
