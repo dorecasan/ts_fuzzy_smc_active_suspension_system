@@ -73,8 +73,8 @@ function sys = mdlOutputs(t,x,u)
     uf = u(1); ur = u(2);zrf = u(3);zrr = u(4);
     U = [uf;ur];w = [zrf;zrr];
     
-    Ff = (ms*g*l1 + mur*g*(l1+l2))/(l1+l2);
-    Fr = (ms+muf+mur)*g - Ff;
+    Fr = (ms*g*l1 + mur*g*(l1+l2))/(l1+l2);
+    Ff = (ms+muf+mur)*g - Fr;
     
     C1 = [-Ksf/ms -Ksr/ms 0 0 -Csf/ms -Csr/ms Csf/ms Csr/ms;
            l1*Ksf/Io -l2*Ksr/Io 0 0 l1*Csf/Io -l2*Csr/Io -l1*Csf/Io l2*Csr/Io];
